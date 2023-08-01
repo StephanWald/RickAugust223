@@ -17,8 +17,14 @@
         <dependency>
             <groupId>org.dwcj</groupId>
             <artifactId>dwcj-engine</artifactId>
-            <version>0.16.0</version>
+            <version>23.02</version>
         </dependency>
+        <dependency>
+            <groupId>org.dwcj</groupId>
+            <artifactId>dwcj-kitchen</artifactId>
+            <version>23.03-SNAPSHOT</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -38,8 +44,8 @@
                 <configuration>
                     <!-- see https://github.com/DwcJava/dwcj-install-maven-plugin for options -->
                     <deployurl>http://localhost:8888/dwcj-install</deployurl>
-                    <classname>samples.HelloWorldJava</classname>
-                    <publishname>hworld</publishname>
+                    <classname>samples.Rick</classname>
+                    <publishname>rick</publishname>
                     <debug>true</debug>
                 </configuration>
             </plugin>

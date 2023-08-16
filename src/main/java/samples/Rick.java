@@ -12,9 +12,6 @@ import org.dwcj.exceptions.DwcjException;
 import org.dwcj.kitchen.fileupload.FileUpload;
 import org.dwcj.kitchen.fileupload.event.FileUploadEvent;
 
-/**
- * A simple HelloWorld app.
- */
 @InlineStyleSheet(/* css */"""
     .frame {
       display: inline-grid;

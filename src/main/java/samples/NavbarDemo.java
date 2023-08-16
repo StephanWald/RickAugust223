@@ -72,10 +72,10 @@ public void run() throws DwcjException {
     navItems.add(new NavbarItem("8", "tabler:brand-flickr", "flickr", "/brand-flickr", false, null));
 
     navbar
-            .setShowNewTab(true)
-            .setShowFavorites(true)
+            //.setShowNewTab(true)
+            //.setShowFavorites(true)
             .setExpanse(Navbar.Expanse.MEDIUM)
-            .setNavItemsTitle("Navigation")
+            //.setNavItemsTitle("Navigation")
             .setInputPlaceholder("Search");
 
 

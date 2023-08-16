@@ -1,10 +1,7 @@
 package samples;
 
 import org.dwcj.App;
-import org.dwcj.annotation.Attribute;
-import org.dwcj.annotation.InlineJavaScript;
 import org.dwcj.annotation.InlineStyleSheet;
-import org.dwcj.annotation.JavaScript;
 import org.dwcj.component.button.Button;
 import org.dwcj.component.button.event.ButtonClickEvent;
 import org.dwcj.component.layout.applayout.AppLayout;

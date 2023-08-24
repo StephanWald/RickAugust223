@@ -44,7 +44,7 @@
                 <configuration>
                     <!-- see https://github.com/DwcJava/dwcj-install-maven-plugin for options -->
                     <deployurl>http://localhost:8888/dwcj-install</deployurl>
-                    <classname>samples.NavbarDemo</classname>
+
                     <publishname>rick</publishname>
                     <debug>true</debug>
                 </configuration>

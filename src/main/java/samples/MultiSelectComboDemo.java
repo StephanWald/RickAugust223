@@ -2,6 +2,8 @@ package samples;
 
 import org.dwcj.App;
 import org.dwcj.annotation.InlineStyleSheet;
+import org.dwcj.component.button.Button;
+import org.dwcj.component.button.event.ButtonClickEvent;
 import org.dwcj.component.window.Frame;
 import org.dwcj.exceptions.DwcjException;
 import org.dwcj.kitchen.multiselectcombo.MultiSelectComboBox;
@@ -12,6 +14,7 @@ import org.dwcj.kitchen.multiselectcombo.event.MultiSelectComboBoxOpenedChangedE
 import org.dwcj.kitchen.multiselectcombo.event.MultiSelectComboBoxSelectedChangedEvent;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @InlineStyleSheet(/* css */"""
     .frame {
@@ -88,6 +91,20 @@ public class MultiSelectComboDemo extends App {
 
     multiSelectComboBox.setItems(items);
     multiSelectComboBox.setSelected(selectedItems);
+
+    Button getSelectionButton = new Button("get Selection");
+    frame.add(getSelectionButton);
+
+    frame.setStyle("display","grid");
+    frame.setStyle("gap","20px");
+
+    getSelectionButton.onClick(this::getSelection);
+  }
+
+  private void getSelection(ButtonClickEvent buttonClickEvent) {
+    List<String> s = multiSelectComboBox.getSelected();
+    App.msgbox(s.toString());
+
   }
 
   public void inputChangeHandler(MultiSelectComboBoxInputEvent event) {

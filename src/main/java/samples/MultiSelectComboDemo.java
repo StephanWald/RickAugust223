@@ -103,7 +103,7 @@ public class MultiSelectComboDemo extends App {
 
   private void getSelection(ButtonClickEvent buttonClickEvent) {
     List<String> s = multiSelectComboBox.getSelected();
-    App.msgbox(s.toString());
+    App.msgbox("Selection: "+s);
 
   }
 

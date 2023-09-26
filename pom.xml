@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.dwcj.samples</groupId>
-    <artifactId>hello-world-java</artifactId>
+    <artifactId>rick</artifactId>
     <version>0.16.0</version>
 
     <properties>
@@ -17,18 +17,18 @@
         <dependency>
             <groupId>org.dwcj</groupId>
             <artifactId>dwcj-engine</artifactId>
-            <version>23.03-SNAPSHOT</version>
+            <version>23.04-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.dwcj</groupId>
             <artifactId>dwcj-kitchen</artifactId>
-            <version>23.03-SNAPSHOT</version>
+            <version>23.04-SNAPSHOT</version>
         </dependency>
 
     </dependencies>
 
     <build>
-        <finalName>HelloWorldJava</finalName>
+        <finalName>rick</finalName>
         <plugins>
             <plugin>
                 <groupId>org.dwcj</groupId>

@@ -5,7 +5,7 @@ import org.dwcj.annotation.InlineStyleSheet;
 import org.dwcj.component.button.Button;
 import org.dwcj.component.button.event.ButtonClickEvent;
 import org.dwcj.component.layout.applayout.AppLayout;
-import org.dwcj.component.texts.Label;
+import org.dwcj.component.text.Label;
 import org.dwcj.component.window.Frame;
 import org.dwcj.component.window.Panel;
 import org.dwcj.exceptions.DwcjException;
@@ -30,8 +30,8 @@ public class AppWithMenu extends App {
   public void run() throws DwcjException {
     Frame window = new Frame();
     AppLayout demo = new AppLayout();
-    demo.setDrawerWidth("340px");
     window.add(demo);
+    // demo.setDrawerWidth("800px");
 
     // Header
     demo.getHeader().addClassName("layout__header")

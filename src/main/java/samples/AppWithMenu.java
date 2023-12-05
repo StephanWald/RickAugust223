@@ -34,13 +34,15 @@ public class AppWithMenu extends App {
     // demo.setDrawerWidth("800px");
 
     // Header
-    demo.getHeader().addClassName("layout__header")
-        .add(new Label("<html><bbj-icon-button name='menu-2' data-drawer-toggle><bbj-icon-button></html>"),
-            new Label("DWCJ Application")
+    Panel header = new Panel();
+    header.addClassName("layout__header");
+        header.add(new Label("<html><bbj-icon-button name='menu-2' data-drawer-toggle><bbj-icon-button></html>"),
+            new Label("DWCJ Applicationnnn")
                 .addClassName("layout__header--title"));
+    demo.addToHeader(header);
 
     // Drawer
-    Panel drawer = demo.getDrawer();
+    Panel drawer = new Panel();
     drawer.addClassName("app-layout-drawer");
 
     // Drawer's logo container and logo
@@ -50,7 +52,8 @@ public class AppWithMenu extends App {
 
     // Content
     this.contentLabel = new Label();
-    demo.getContent().add(
+    Panel content = new Panel();
+    content.add(
         new Label("<html><h1>Application Title</h1></html>"),
         this.contentLabel);
 
@@ -59,11 +62,12 @@ public class AppWithMenu extends App {
 
     this.itemsLabel = new Label();
 
-    demo.getContent().add(getMenuDataBtn,itemsLabel);
-    demo.getContent().setStyle("display","inline-grid");
+    content.add(getMenuDataBtn,itemsLabel);
+    content.setStyle("display","inline-grid");
+    demo.addToContent(content);
     navbar = new Navbar();
     drawer.add(navbar);
-
+    demo.addToDrawer(drawer);
     ArrayList<NavbarItem> windowChildren = new ArrayList();
     windowChildren.add(new NavbarItem("4", "tabler:alien", "alien", "/window/alien", false, null));
     windowChildren.add(new NavbarItem("3", "tabler:album", "album", "/window/album", true, null));

@@ -42,15 +42,17 @@ public class SimpleRouterDemo extends App {
     window.add(layout);
 
     // Header
-    layout.getHeader().addClassName("layout__header")
-        .add(new Label("<html><bbj-icon-button name='menu-2' data-drawer-toggle><bbj-icon-button></html>"),
-            new Label("DWCJ Application")
+    Panel header = new Panel();
+    header.addClassName("layout__header");
+        header.add(new Label("<html><bbj-icon-button name='menu-2' data-drawer-toggle><bbj-icon-button></html>"),
+            new Label("DWCJ Applicationnnn")
                 .addClassName("layout__header--title"));
-
+    layout.addToHeader(header);
     // Drawer
-    Panel drawer = layout.getDrawer();
+    Panel drawer = new Panel();
     drawer.addClassName("app-layout-drawer");
-
+    layout.addToDrawer(drawer);
+    
     // Drawer's logo container and logo
     drawer.add(new Panel().addClassName("drawer__logo").add(
         new Label("<html><img src='" + "https://i.ibb.co/1n4n1Nh/logo.png" + "'</img></html>")));
@@ -66,10 +68,11 @@ public class SimpleRouterDemo extends App {
 
     // Adding tabs to drawer menu
     drawerMenu.add("<bbj-icon name='dashboard'></bbj-icon>      Dashboard")
-        .add("<bbj-icon name='shopping-cart'></bbj-icon>  Orders")
-        .add("<bbj-icon name='users'></bbj-icon>          Customers")
-        .add("<bbj-icon name='box'></bbj-icon>            Products")
-        .add("<bbj-icon name='files'></bbj-icon>          Documents");
+    .add("<bbj-icon name='shopping-cart'></bbj-icon>  Orders")
+    .add("<bbj-icon name='users'></bbj-icon>          Customers")
+    .add("<bbj-icon name='box'></bbj-icon>            Products")
+    .add("<bbj-icon name='files'></bbj-icon>          Documents");
+    
 
     menuItemsOrder.put("dashboard/*",0);
     menuItemsOrder.put("orders/*",1);
@@ -113,7 +116,7 @@ public class SimpleRouterDemo extends App {
       }
       if (p != null){
         contentPanels.put(matchingRoute,p);
-        layout.getContent().add(p);
+        layout.addToContent(p);
 
       }
     }

@@ -40,8 +40,8 @@ public void run() throws DwcjException {
 
     appLayout
         .setDrawerWidth("340px")
-        .setHeader(header)
-        .setDrawer(drawer);
+        .addToHeader(header)
+        .addToDrawer(drawer);
 
     frame.add(appLayout);
 
@@ -89,7 +89,7 @@ public void run() throws DwcjException {
 
 private void onSelectedMenuItem(NavbarSelectedEvent navbarSelectedEvent) {
     Map x = (Map) navbarSelectedEvent.getEventMap().get("detail");
-    App.consoleLog("ID Selected: "+x.get("id").toString());
+    App.consoleLog("ID Selected: "+ x.get("id").toString());
 }
 
 public void handleDrawerExpander(ButtonClickEvent buttonClickEvent) {

@@ -37,7 +37,7 @@ public class AppWithMenu extends App {
     Panel header = new Panel();
     header.addClassName("layout__header");
         header.add(new Label("<html><bbj-icon-button name='menu-2' data-drawer-toggle><bbj-icon-button></html>"),
-            new Label("DWCJ Applicationnnn")
+            new Label("DWCJ Application")
                 .addClassName("layout__header--title"));
     demo.addToHeader(header);
 
